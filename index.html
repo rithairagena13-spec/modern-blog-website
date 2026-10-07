@@ -3,49 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <title>SortSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">  
 </head>
-<body   class="bg-zinc-100 text-zinc-900">
 
-    
-    <!-- NAVIGATION -->
-    <nav class="bg-zinc-950 text-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<body class="bg-zinc-100 text-zinc-900">
 
-            <a href="#" class="text-2xl font-bold">
-                <i class="fa-solid fa-trophy text-white mr-2"></i>
-                Sport<span class="text-zinc-400">Sphere</span>
-            </a>
+    <!-- navbar -->
+    <nav class="bg-zinc-950 text-white border-b border-zinc-800 sticky top-0 z-50">
 
-            <div class="hidden md:flex items-center gap-8">
-                <a href="#" class="hover:text-zinc-400 transition">Home</a>
-                <a href="#sports" class="hover:text-zinc-400 transition">Sports</a>
-                <a href="#events" class="hover:text-zinc-400 transition">Events</a>
-                <a href="#" class="hover:text-zinc-400 transition">Teams</a>
-                <a href="#" class="hover:text-zinc-400 transition">News</a>
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+
+                <a href="index.html" class="text-2xl font-extrabold tracking-tight">
+                    <i class="fa-solid fa-trophy mr-2"></i>
+                    Sport<span class="text-zinc-400">Sphere</span>
+                </a>
+
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+
+                    <a href="index.html" class="text-white border-b-2 border-white pb-1">
+                        For You
+                    </a>
+
+                    <a href="#football" class="text-zinc-400 hover:text-white transition">
+                        Football
+                    </a>
+
+                    <a href="#basketball" class="text-zinc-400 hover:text-white transition">
+                        Basketball
+                    </a>
+
+                    <a href="#athletics" class="text-zinc-400 hover:text-white transition">
+                        Athletics
+                    </a>
+
+                    <a href="#community" class="text-zinc-400 hover:text-white transition">
+                        Community
+                    </a>
+
+                </div>
+
+                <button
+                    class="w-10 h-10 rounded-full border border-zinc-700 hover:bg-zinc-800 transition"
+                    aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
             </div>
-
-            <button class="bg-white text-zinc-950 hover:bg-zinc-200 px-5 py-2 rounded-full font-semibold transition">
-                Explore
-            </button>
-
         </div>
     </nav>
 
- <!-- HERO BANNER -->
-    <section class="relative min-h-600px flex items-center bg-cover bg-center">
-       <img src="/images/banner.avif" alt="sports profile" class="absolute inset-0 w-full h-full object-cover">
-       <div class="absolute inset-0 bg-zinc-950/40"></div>
+     <!-- hero banner -->
+    <section class="relative min-h-[560px] flex items-center overflow-hidden">
 
-        <!-- HERO CONTENT -->
-        <div class="relative max-w-7xl mx-auto px-6 py-20 w-full">
+        <img
+            src="/images/banner.avif"
+            alt="Athletes running on a track"
+            class="absolute inset-0 w-full h-full object-cover">
+
+        <div class="absolute inset-0 bg-zinc-950/20"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6 py-24 w-full">
 
             <div class="max-w-3xl text-white">
 
-                <span class="inline-block bg-white/10 border border-white/30 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                    <i class="fa-solid fa-bolt mr-2"></i>
+                <span class="inline-flex items-center gap-2 bg-white/10 border border-white/30 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                    <i class="fa-solid fa-bolt"></i>
                     Your World of Sports
                 </span>
 
@@ -55,37 +80,50 @@
                     Compete.
                 </h1>
 
-                <p class="text-lg md:text-xl text-zinc-300 mb-8 max-w-2xl">
-                    Discover sports events, teams, competitions,
-                    training opportunities and the latest sports news
-                    all in one place.
+                <p class="text-lg md:text-xl text-zinc-200 leading-relaxed mb-8 max-w-2xl">
+                    Explore inspiring sports stories, athlete journeys,
+                    competitions and the latest conversations shaping the world of sports.
                 </p>
 
-                <div class="flex flex-wrap gap-4">
-
-                    <a
-                        href="#sports"
-                        class="bg-white text-zinc-950 hover:bg-zinc-200 px-7 py-3 rounded-full font-semibold transition"
-                    >
-                        Explore Sports
-                        <i class="fa-solid fa-arrow-right ml-2"></i>
-                    </a>
-
-                    <a
-                        href="#events"
-                        class="border border-white/50 hover:bg-white hover:text-zinc-950 px-7 py-3 rounded-full font-semibold transition"
-                    >
-                        Upcoming Events
-                    </a>
-
-                </div>
+                <a href="#latest"
+                    class="inline-flex items-center bg-white text-zinc-950 px-7 py-3 rounded-full font-bold hover:bg-zinc-200 transition">
+                    Explore Articles
+                    <i class="fa-solid fa-arrow-right ml-3"></i>
+                </a>
 
             </div>
 
         </div>
+
+    </section>
+
+   <!-- latest stories -->
+    <section class="max-w-7xl mx-auto px-6 pt-16">
+
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+
+            <div>
+
+                <h2 class="text-4xl md:text-5xl font-extrabold mt-2">
+                    Latest Stories
+                </h2>
+
+                <p class="text-zinc-500 mt-4 max-w-2xl">
+                    Stories, insights and conversations from the world of sports.
+                </p>
+
+            </div>
+
+            <div class="text-sm text-zinc-500">
+                <i class="fa-regular fa-newspaper mr-2"></i>
+                6 articles found
+            </div>
+
+        </div>
+
     </section>
 
 
-</body>
+    </body>
+    </html>
 
-</html>
